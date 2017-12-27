@@ -5,9 +5,7 @@ class TrieNode{
 	HashMap<Character, TrieNode> children = new HashMap<Character, TrieNode>();
 	boolean isLeaf;
 	
-	TrieNode(){
-		
-	}
+	TrieNode(){}
 	
 	TrieNode(char value){
 		this.value = value;
@@ -16,7 +14,6 @@ class TrieNode{
 
 public class Trie {
 	private TrieNode root;
-	
 	Trie(){
 		root = new TrieNode();
 	}
@@ -24,7 +21,6 @@ public class Trie {
 	/** Inserts a word in to the Trie */
 	public void insert(String word) {
 		HashMap<Character, TrieNode> children  = root.children;
-		
 		for(int i=0;i<word.length();i++) {
 			char ch = word.charAt(i);
 			TrieNode t;
